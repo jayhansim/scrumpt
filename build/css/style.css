@@ -201,37 +201,44 @@ strong, b {
   font-family: "latosemibold", sans-serif; }
 
 .header {
-  padding: 20px 0;
-  background: #333;
-  text-align: center; }
+  padding: 15px 0;
+  background: #333; }
   .header a {
     color: #fff; }
+  @media (max-width: 767px) {
+    .header {
+      text-align: center;
+      padding-bottom: 0; } }
 
 .logo {
   background: url(../img/scrump-logo.png) no-repeat;
   background-size: cover;
   display: inline-block;
-  width: 148px;
-  height: 60px; }
+  width: 123px;
+  height: 50px; }
 
 @media (min-width: 768px) {
   .nav {
     position: absolute;
     right: 15px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%); } }
+    top: -15px; } }
 .nav ul {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 0; }
+  margin: 0; }
 .nav li {
   display: inline-block; }
   .nav li:not(:first-child) {
-    margin-left: 20px; }
+    margin-left: 10px; }
+.nav a {
+  display: block;
+  padding: 28px 10px 0; }
+  .nav a:hover {
+    text-decoration: none;
+    color: #3cc3c3; }
+  .nav a.current {
+    color: #3cc3c3;
+    border-top: 2px solid #3cc3c3; }
 .nav .nav--upgrade {
   text-transform: uppercase;
   color: #3cc3c3;
@@ -239,7 +246,16 @@ strong, b {
 @media (max-width: 767px) {
   .nav {
     position: static;
-    padding-top: 20px; } }
+    padding-top: 20px; }
+    .nav li {
+      margin: 0 2px; }
+      .nav li:not(:first-child) {
+        margin: 0 2px; }
+    .nav a {
+      padding: 0 5px 10px; }
+      .nav a.current {
+        border-top: none;
+        border-bottom: 2px solid #3cc3c3; } }
 
 .toolbar {
   padding: 20px 0;
