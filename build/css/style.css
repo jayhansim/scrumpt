@@ -442,7 +442,7 @@ strong, b {
     left: 0;
     width: 100%;
     height: 100%; }
-  .deal--expired {
+  .deal--inactive {
     opacity: 0.5; }
 
 .deal__title {
@@ -483,7 +483,7 @@ strong, b {
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0); }
-  .deal--expired:hover .deal__info {
+  .deal--inactive:hover .deal__info {
     -webkit-transform: translateY(50px);
     -moz-transform: translateY(50px);
     -ms-transform: translateY(50px);
@@ -568,7 +568,7 @@ strong, b {
   background: url(../img/Heart@2x.png) no-repeat center;
   background-size: 25px 22px; }
 
-.expired {
+.inactive {
   opacity: 1;
   position: absolute;
   top: 0;
@@ -581,7 +581,7 @@ strong, b {
   text-align: center;
   z-index: 2;
   font-family: "latosemibold", sans-serif; }
-  .expired:hover {
+  .inactive:hover {
     text-decoration: none;
     background-color: #36b0b0; }
 

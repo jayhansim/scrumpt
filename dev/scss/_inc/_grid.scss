@@ -116,7 +116,7 @@
 		height: 100%;
 	}
 
-	&--expired {
+	&--inactive {
 		opacity: .5
 	}
 }
@@ -152,7 +152,7 @@
 	.deal:hover & {
 		@include transform(translateY(0));
 	}
-	.deal--expired:hover & {
+	.deal--inactive:hover & {
 		@include transform(translateY(50px));
 	}
 }
@@ -211,7 +211,7 @@
 	background-size: 25px 22px;
 }
 
-.expired {
+.inactive {
 	opacity: 1;
 	position: absolute;
 	top: 0;

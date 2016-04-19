@@ -18,8 +18,8 @@ head
 
 	mixin list__item(title, titleDesc, day, likesNum)
 					li.list__item
-						if expired
-							a.expired(href="#") Upgrade to reactivate
+						if inactive
+							a.inactive(href="#") Upgrade to reactivate
 						.deal&attributes(attributes)
 							h2.deal__title= title
 								span= titleDesc
