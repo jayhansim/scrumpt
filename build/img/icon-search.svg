@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" fill="#333333">
+            <path d="M9.5,18 L9.5,18 C14.1944204,18 18,14.1944204 18,9.5 C18,4.80557963 14.1944204,1 9.5,1 C4.80557963,1 1,4.80557963 1,9.5 C1,14.1944204 4.80557963,18 9.5,18 L9.5,18 L9.5,18 Z M9.5,19 L9.5,19 C4.25329488,19 0,14.7467051 0,9.5 C0,4.25329488 4.25329488,0 9.5,0 C14.7467051,0 19,4.25329488 19,9.5 C19,14.7467051 14.7467051,19 9.5,19 L9.5,19 L9.5,19 Z" id="glass"></path>
+            <path d="M16.1799078,16.8841106 L22.1799078,21.8841106 L22.5640184,22.2042028 L23.2042028,21.4359816 L22.8200922,21.1158894 L16.8200922,16.1158894 L16.4359816,15.7957972 L15.7957972,16.5640184 L16.1799078,16.8841106 L16.1799078,16.8841106 Z" id="handle"></path>
+        </g>
+    </g>
+</svg>

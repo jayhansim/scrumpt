@@ -1,0 +1,243 @@
+//------------------------
+//	NEW LISTING
+//------------------------
+
+.new {
+	background-color: darken(#f2f3f0,2);
+	margin: 40px 0;
+	padding: 40px;
+	overflow: hidden;
+	@include display(flex);
+
+	h1 {
+		margin-bottom: 20px;
+	}
+
+	.form-group {
+		margin-bottom: 20px;
+	}
+}
+
+// layout
+.new__form {
+	width: 65%;
+	padding-right: 40px;
+}
+
+.new__preview {
+	width: 35%;
+
+
+	.list__item {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+@media (max-width: $screen-sm-max) {
+	.new {
+		@include flex-wrap(wrap);
+		@include justify-content(center)
+	}
+	.new__preview {
+		order: 1;
+		width: 50%;
+	}
+	.new__form {
+		order: 2;
+		width: 100%;
+		padding-right: 0;
+	}
+}
+
+@media (max-width: $screen-xs-max) {
+	.new {
+		padding: 20px;
+	}
+	.new__preview {
+		width: 100%;
+	}
+}
+
+
+
+// form
+.control-label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form-control {
+	width: 100%;
+	padding: 10px 12px;
+	border: none;
+	border-radius: 0;
+
+	&:focus, &:active {
+		outline: 0;
+		box-shadow: 0 0 5px rgba($color-teal,.8);
+	}
+}
+
+// Radio
+.radio {
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+
+	&:not(:last-child) {
+		margin-right: 20px;
+	}
+
+	input {
+		position: absolute;
+		opacity: 0;
+
+		&:checked {
+			+ label::before {
+				background-color: $color-teal;
+			}
+		}
+	}
+
+	label {
+		padding-left: 40px;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 30px;
+			height: 30px;
+			background-color: #fff;
+			border: 5px solid #fff;
+			border-radius: 50%;
+		}
+	}
+}
+
+// checkbox
+.checkbox {
+	position: relative;
+	display: inline-block;
+
+	input {
+		position: absolute;
+		opacity: 0;
+
+		&:checked {
+			+ label {
+				color: $color-teal;
+				border-color: $color-teal;
+			}
+		}
+	}
+
+	label {
+		color: rgba($color, .5);
+		background-color: #fff;
+		display: block;
+		width: 50px;
+		padding: 6px;
+		text-align: center;
+		border: 1px solid #fff;
+		margin-bottom: 5px;
+	}
+}
+
+// upload image
+.form-group--image {
+	margin-top: 30px;
+	@include display(flex);
+	@include align-items(center);
+
+	.select, .upload-image {
+		width: 46%;
+	}
+
+	span {
+		flex-grow: 1;
+		text-align: center;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		display: block;
+
+		span {
+			text-align: center;
+			display: block;
+			padding: 5px 0;
+		}
+
+		.select, .upload-image {
+			width: auto;
+		}
+	}
+}
+
+.form-group--submit {
+	margin-top: 40px;
+}
+
+.btn {
+	display: block;
+	width: 100%;
+	color: #fff;
+	padding: 10px 20px;
+	background: $color-teal;
+	border: none;
+	font-family: $font;
+	text-transform: uppercase;
+	@include transition(all .1s linear);
+
+	&:hover {
+		background-color: darken($color-teal,5);
+	}
+
+	&--grey {
+		background-color: $color;
+
+		&:hover {
+			background-color: darken($color,5);
+		}
+	}
+
+	&[disabled="disabled"] {
+		opacity: 0.7;
+
+		&:hover {
+			background-color: $color-teal;
+		}
+	}
+}
+
+select.form-control {
+	-webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #fff url(../img/dropdown-arrow-grey.svg) no-repeat right 10px center;
+}
+
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-style: italic;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-style: italic;
+}
+
+:-ms-input-placeholder {
+   font-style: italic;
+}
+
+.new__preview {
+	ul {
+		list-style: none;
+		padding-left: 0;
+		margin: 0;
+	}
+}

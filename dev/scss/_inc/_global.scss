@@ -1,0 +1,47 @@
+//------------------------
+//	GLOBAL
+//------------------------
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	@include font-size;
+	color: $color;
+	font-family: $font-light;
+}
+
+a {
+	color: $color-teal;
+	text-decoration: none;
+	@include transition(all .1s linear);
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// typography
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-weight: normal;
+	font-family: $font-light;
+}
+
+h1 {
+	line-height: 1.1;
+}
+
+strong, b {
+	font-family: $font-semibold;
+}

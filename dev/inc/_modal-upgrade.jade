@@ -1,0 +1,97 @@
+.modal.fade(tabindex='-1', role='dialog', id="modal-pricing")
+	.modal-dialog
+		.modal-content.modal-pricing(id="pricing-table")
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+				h2.modal-title Woo! You are ready for an upgrade!
+			.modal-body
+				.pricing
+					.pricing__duration
+						a.selected(href="#monthly") Monthly
+						a.annual(href="#annually") Annually (-10%!)
+					.pricing__table
+						ul(data-duration="monthly")
+							li.package
+								.package__title Free
+								.package__price Free!
+								ul.package__features
+									li Venue listing
+									li 5 Tiles
+									li Base Priority
+									li Email support
+								.package__buy
+									button.btn(type="button", disabled="disabled") Current
+
+							li.package
+								.package__title Light
+								.package__price $30/mth
+								ul.package__features
+									li Venue listing
+									li 8 Tiles
+									li Priority above Free
+									li Email support
+									li Basic reporting
+								.package__buy
+									button.btn(type="button") Upgrade!
+
+							li.package
+								.package__title Mid
+								.package__price $69/mth
+								ul.package__features
+									li Venue listing
+									li 11 Tiles
+									li Priority above Light
+									li Email &amp; phone support
+									li Advanced reporting
+								.package__buy
+									button.btn(type="button") Upgrade!
+
+							li.package
+								.package__title Full
+								.package__price $175/mth <em>(3mth min)</em>
+								ul.package__features
+									li Venue listing
+									li 15 Tiles
+									li Top Priority
+									li Account Manager
+									li Premium reporting
+								.package__buy
+									button.btn(type="button") Upgrade!
+		.modal-content.modal-payment(id="payment")
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+				h2.modal-title Upgrade to the <span id="selected-package">Full</span> Plan
+				h3.package__description Maximum tile and all of our Premium features
+			.modal-body.align-center
+				form(id="form-payment")
+					.payment
+						.payment__row
+							.form-group
+								input.form-control(type="number", placeholder="Card number", required)
+								ul.cc
+									li.cc__visa
+									li.cc__mastercard
+									li.cc__amex
+							.form-group
+								input.form-control(type="number", placeholder="Expiry", required)
+						.payment__row
+							.form-group
+								input.form-control(type="text", placeholder="Name on card", required)
+							.form-group
+								input.form-control(type="password", placeholder="Security code", required)
+					.payment__charge
+						h3 You will be charged <strong><sup>$</sup>1,785/year</strong>
+						h4 You save $315 <span>or <a href="#">pay monthly</a></span>
+					.payment__submit
+						button.btn(type="submit") Upgrade Your Plan!
+
+				.payment__footnote
+					p
+						i.icon__lock
+						| Secure credit card payment
+						span This is a secure 128-bit SSL encrypted payment
+
+
+

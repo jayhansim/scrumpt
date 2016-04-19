@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,width=device-width">
+  <title>Add New Listing</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="scripts/scripts.min.js"></script>
+  <body></body>
+  <header role="banner" class="header">
+    <div class="container">
+      <div class="logo"></div>
+      <nav role="navigation" class="nav">
+        <ul>
+          <li><a href="#" id="upgrade" class="nav--upgrade">Upgrade</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Account</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main role="main">
+    <div class="container">
+      <div class="new">
+        <div class="new__form">
+          <form>
+            <h1>What's the deal?</h1>
+            <div class="form-group form-group--radio">
+              <div class="radio">
+                <input type="radio" name="dealType" id="meal">
+                <label for="meal">Meal</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="dealType" id="drink">
+                <label for="drink">Drink</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="description" class="control-label">Description</label>
+              <input type="text" placeholder="eg. $15 Steak or 2 for 1 Cocktails" name="description" id="description" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="conditions" class="control-label">Conditions</label>
+              <input type="text" placeholder="eg. with drinks purchase or 6-10pm" name="conditions" id="conditions" class="form-control">
+            </div>
+            <div class="form-group form-group--checkbox">
+              <div class="control-label">Select available days</div>
+              <div class="checkbox">
+                <input type="checkbox" name="monday" id="monday">
+                <label for="monday">Mon</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="tuesday" id="tuesday">
+                <label for="tuesday">Tue</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="wednesday" id="wednesday">
+                <label for="wednesday">Wed</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="thursday" id="thursday">
+                <label for="thursday">Thu</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="friday" id="friday">
+                <label for="friday">Fri</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="saturday" id="saturday">
+                <label for="saturday">Sat</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="sunday" id="sunday">
+                <label for="sunday">Sun</label>
+              </div>
+            </div>
+            <div class="form-group form-group--image">
+              <div class="select">
+                <select class="form-control">
+                  <option value="" selected="selected" disabled="disabled">Select image</option>
+                  <option value="image1">Drinks_3.jpg</option>
+                  <option value="image2">Drinks_4.jpg</option>
+                </select>
+              </div><span>or</span>
+              <div class="upload-image">
+                <button type="button" class="btn btn--grey">Upload Image</button>
+              </div>
+            </div>
+            <div class="form-group form-group--submit">
+              <button type="submit" disabled="disabled" class="btn">Create Tile!</button>
+            </div>
+          </form>
+        </div>
+        <div class="new__preview">
+          <ul>
+              <li class="list__item">
+                <div class="deal" style="background-image: url(img/image.jpg)">
+                  <h2 class="deal__title">Three Sliders for $10!<span></span></h2>
+                  <div class="deal__info">
+                    <div class="deal__info__day">
+                      <div class="day">Mon</div>
+                      <div class="likes"><i class="icon__likes"></i>16
+                      </div>
+                    </div>
+                    <ul class="deal__info__edit">
+                      <li><a href="#">Edit</a></li>
+                      <li><a href="#">Change Photo</a></li>
+                      <li><a href="#" class="delete">Delete</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</head>

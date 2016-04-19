@@ -1,0 +1,295 @@
+//------------------------
+//	MODAL
+//------------------------
+
+.modal {
+	background-color: rgba(#333,.8);
+}
+
+.modal-content {
+	box-shadow: none;
+	border-radius: 0;
+	border: none;
+}
+
+@media (min-width: $screen-md) {
+	.modal-dialog {
+		width: 90%;
+		max-width: 1170px;
+		margin-top: 60px;
+	}
+}
+
+.modal-header {
+	text-align: center;
+	border-bottom: none;
+	position: relative;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.modal-body {
+
+	@media (min-width: $screen-sm) {
+		padding: 15px 40px 40px;
+	}
+}
+
+.close {
+	background: none;
+	border: none;
+	@include font-size(2.4);
+	font-family: $font;
+	position: absolute;
+	right: 10px;
+	top: 10%;
+	color: #999;
+}
+
+// pricing
+.pricing__duration {
+	background-color: $color-lightgrey;
+	line-height: 50px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: $font-semibold;
+
+	a {
+		display: inline-block;
+		padding: 0 20px;
+
+		&:hover {
+			text-decoration: none;
+			background: rgba(#fff,.5);
+		}
+
+		&.selected {
+			background-color: darken($color-lightgrey, 5);
+			color: $color;
+		}
+	}
+
+	@media (max-width: $screen-xs) {
+		@include font-size(1.6);
+		a {
+			padding: 0 10px;
+		}
+	}
+}
+
+.pricing__table {
+	margin-top: 30px;
+
+	ul {
+		margin: 0;
+		padding-left: 0;
+		list-style: none;
+	}
+
+	> ul {
+		@include display(flex);
+		@include justify-content(space-between);
+
+
+		> li {
+			@include display(flex);
+			@include flex-direction(column);
+			@include justify-content(space-between);
+			background: $color-lightgrey;
+			width: 23%;
+			text-align: center;
+		}
+
+		@media (max-width: $screen-sm-max) {
+			@include flex-wrap(wrap);
+
+			> li {
+				width: 46%;
+
+				&:nth-child(-n+2) {
+					margin-bottom: 30px;
+				}
+			}
+		}
+
+		@media (max-width: $screen-xs) {
+			@include flex-direction(column);
+
+			> li {
+				width: auto;
+			}
+		}
+	}
+}
+
+// package
+.package__title {
+	@include font-size(2.6);
+	background: darken($color-lightgrey, 5);
+	padding: 10px 0;
+}
+
+.package__price {
+	font-family: $font-semibold;
+	padding: 30px 0 10px;
+	border-bottom: 1px solid darken($color-lightgrey, 5);
+
+	em {
+		font-family: $font;
+	}
+}
+
+.package__features {
+	padding-bottom: 40px;
+
+	li {
+		padding: 10px 0;
+	}
+}
+
+.package__buy {
+	margin-top: auto;
+
+	.btn[disabled] {
+		background-color: rgba(#333, .4);
+	}
+}
+
+
+//payment
+
+.payment {
+	background: $color-lightgrey;
+	padding: 40px;
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+
+	@media (max-width: $screen-xs) {
+		padding: 5%;
+	}
+}
+
+.payment__row {
+	@include display(flex);
+
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.form-group {
+		position: relative;
+
+		&:first-child {
+			margin-right: 20px;
+			@include flex-grow(1);
+		}
+
+		&:last-child {
+			width: 30%;
+		}
+	}
+
+	@media (max-width: $screen-xs-max) {
+		@include flex-direction(column);
+
+		.form-group {
+			&:first-child {
+				margin-right: 0;
+			}
+
+			&:last-child {
+				margin-top: 20px;
+				width: auto;
+			}
+		}
+	}
+}
+
+.payment__charge {
+	margin: 30px 0 20px;
+
+	h4 {
+		text-transform: uppercase;
+		color: $color-teal;
+		font-family: $font-semibold;
+		@include font-size(1.5);
+
+		span {
+			text-transform: none;
+			color: #c3c2c2;
+
+			a {
+				color: #c3c2c2;
+				text-decoration: underline;
+
+				&:hover {
+					color: darken(#c3c2c2, 5);
+				}
+			}
+		}
+	}
+}
+
+.payment__submit {
+	.btn {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+}
+
+.payment__footnote {
+	margin-top: 40px;
+	@include font-size(1.3);
+	font-family: $font;
+	color: #777;
+
+	p {
+		margin-bottom: 0;
+	}
+
+	span {
+		display: block;
+		font-family: $font-light;
+	}
+}
+
+.cc {
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+	position: absolute;
+	right: 10px;
+	top: 52%;
+	@include transform(translateY(-50%));
+
+	@media (max-width: $screen-xs-max) {
+		position: static;
+		@include transform(translateY(0));
+		text-align: right;
+		margin-top: 10px;
+	}
+}
+
+[class*="cc__"] {
+	background: url(../img/cc.png) no-repeat;
+	display: inline-block;
+	width: 28px;
+	height: 16px;
+	background-size: 84px 16px;
+	border-radius: 1px;
+}
+
+.cc__mastercard {background-position: center;}
+.cc__amex { background-position: right}
+
+
+
+.icon__lock {
+	background: url(../img/icon-lock.svg) no-repeat;
+	width: 10px;
+	height: 12px;
+	display: inline-block;
+	vertical-align: -1px;
+	margin-right: 3px;
+}

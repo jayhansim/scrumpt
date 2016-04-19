@@ -1,0 +1,30 @@
+extends inc/_layout.jade
+
+append css
+	link(rel="stylesheet", href="css/login.css")
+
+block content
+	.container--login
+		header(role="banner")
+			.logo.logo--login
+		main(role="main")
+			.login
+				form.form.form-login
+					.form-group
+						input.form-control(type="email", placeholder="Email Address", required)
+					.form-group
+						input.form-control(type="password", placeholder="Create Password", required)
+					.form-group
+						select.form-control(required)
+							option(value="", selected="selected", disabled="disabled") Select your venue
+							option(value="Sydney") Sydney
+							option(value="Melbourne") Melbourne
+							option(value="Perth") Perth
+					.form-group.form-group--btn
+						button.btn(type="submit") Register
+					.form-group.align-center
+						p Already a member? <strong><a href="login.html">Login</a></strong>
+
+
+
+

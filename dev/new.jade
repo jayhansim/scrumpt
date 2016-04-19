@@ -1,0 +1,79 @@
+extends inc/_layout.jade
+
+block title
+	title Add New Listing
+
+block content
+	include inc/_header.jade
+
+	main(role="main")
+		.container
+			.new
+				.new__form
+					form
+						h1 What's the deal?
+						.form-group.form-group--radio
+							.radio
+								input(type="radio", name="dealType", id="meal")
+								label(for="meal") Meal
+							.radio
+								input(type="radio", name="dealType", id="drink")
+								label(for="drink") Drink
+						.form-group
+							label.control-label(for="description") Description
+							input.form-control(type="text", placeholder="eg. $15 Steak or 2 for 1 Cocktails", name="description", id="description")
+						.form-group
+							label.control-label(for="conditions") Conditions
+							input.form-control(type="text", placeholder="eg. with drinks purchase or 6-10pm", name="conditions", id="conditions")
+						.form-group.form-group--checkbox
+							.control-label Select available days
+							.checkbox
+								input(type="checkbox", name="monday", id="monday")
+								label(for="monday") Mon
+							.checkbox
+								input(type="checkbox", name="tuesday", id="tuesday")
+								label(for="tuesday") Tue
+							.checkbox
+								input(type="checkbox", name="wednesday", id="wednesday")
+								label(for="wednesday") Wed
+							.checkbox
+								input(type="checkbox", name="thursday", id="thursday")
+								label(for="thursday") Thu
+							.checkbox
+								input(type="checkbox", name="friday", id="friday")
+								label(for="friday") Fri
+							.checkbox
+								input(type="checkbox", name="saturday", id="saturday")
+								label(for="saturday") Sat
+							.checkbox
+								input(type="checkbox", name="sunday", id="sunday")
+								label(for="sunday") Sun
+						.form-group.form-group--image
+							.select
+								select.form-control
+									option(value="", selected="selected", disabled="disabled") Select image
+									option(value="image1") Drinks_3.jpg
+									option(value="image2") Drinks_4.jpg
+							span or
+							.upload-image
+								button.btn.btn--grey(type="button") Upload Image
+						.form-group.form-group--submit
+							button.btn(type="submit", disabled="disabled") Create Tile!
+
+				.new__preview
+					ul
+						+list__item("Three Sliders for $10!", "", "Mon", "16")(style="background-image: url(img/image.jpg)")
+
+
+
+
+
+
+
+
+
+
+
+
+
+

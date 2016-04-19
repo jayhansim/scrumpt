@@ -1,0 +1,96 @@
+@import "bourbon";
+@import "_inc/_var";
+
+html {
+	height: 100%;
+	min-height: 100%;
+}
+
+body {
+	background: #333 url(../img/login-bg.jpg) center no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+
+.container--login {
+	max-width: 400px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+header {
+	text-align: center;
+	padding: 40px 0;
+}
+
+.logo--login {
+	width: 260px;
+	height: 106px;
+}
+
+.login {
+	margin: 10px 0 20px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+
+	&--btn {
+		margin-top: 40px;
+	}
+}
+
+.form-control {
+	background: none;
+	border: none;
+	font-family: $font-semibold;
+	display: block;
+	width: 100%;
+	border-bottom: 2px solid #fff;
+	@include transition (all .1s linear);
+	color: #fff;
+	padding: 10px 0;
+	border-radius: 0;
+
+	&:focus, &:active {
+		border-bottom-color: $color-teal;
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+select.form-control {
+	-webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  background: url(../img/dropdown-arrow.svg) no-repeat right 22px;
+}
+
+::-webkit-input-placeholder {
+   color: rgba(#fff,.8);
+   font-style: italic;
+   font-family: $font-light;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(#fff,.8);
+   font-style: italic;
+   font-family: $font-light;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(#fff,.8);
+   font-style: italic;
+   font-family: $font-light;
+}
+
+:-ms-input-placeholder {
+   color: rgba(#fff,.8);
+   font-style: italic;
+   font-family: $font-light;
+}
+
+.btn {
+	text-transform: capitalize;
+}

@@ -1,0 +1,59 @@
+//------------------------
+//	HEADER
+//------------------------
+.header {
+	padding: 20px 0;
+	background: #333;
+	text-align: center;
+
+	a {
+		color: #fff;
+	}
+}
+
+.logo {
+	background: url(../img/scrump-logo.png) no-repeat;
+	background-size: cover;
+	display: inline-block;
+	width: 148px;
+	height: 60px;
+}
+
+
+//------------------------
+//	NAVIGATION
+//------------------------
+
+.nav {
+	@media (min-width: $screen-sm) {
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		@include transform(translateY(-50%));
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 0;
+	}
+
+	li {
+		display: inline-block;
+
+		&:not(:first-child) {
+			margin-left: 20px;
+		}
+	}
+
+	.nav--upgrade {
+		text-transform: uppercase;
+		color: $color-teal;
+		font-family: $font;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		position: static;
+		padding-top: 20px;
+	}
+}

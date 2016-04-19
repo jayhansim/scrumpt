@@ -1,0 +1,57 @@
+//------------------------
+//	TOOLBAR
+//------------------------
+.toolbar {
+	padding: 20px 0;
+	@include display(flex);
+	@include align-items(center);
+}
+
+.add-listing {
+	margin-left: auto;
+	width: 48px;
+	height: 48px;
+	background-color: $color-teal;
+	border-radius: 50%;
+	position: relative;
+	box-shadow: 0 0 4px rgba(black, .35);
+
+	&::before, &::after {
+		position: absolute;
+		width: 40%;
+		height: 2px;
+		background-color: #fff;
+		content: '';
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+		border-radius: 1px;
+	}
+
+	&::after {
+		@include transform(translate(-50%, -50%) rotate(90deg));
+	}
+}
+
+.search {
+	width: 24px;
+	height: 23px;
+	background: url(../img/icon-search.svg) no-repeat;
+	margin-right: 20px;
+}
+
+.sort {
+	padding-left: 20px;
+	border-left: 1px solid #999;
+
+	&__select {
+		-webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+    border: none;
+    background: none;
+    color: $color-teal;
+    text-decoration: underline;
+    cursor: pointer;
+	}
+}

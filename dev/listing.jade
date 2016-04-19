@@ -1,0 +1,38 @@
+extends inc/_layout.jade
+
+block title
+	title Listing
+
+block content
+	include inc/_header.jade
+
+	main(role="main")
+		.container
+
+			include inc/_toolbar.jade
+
+			ul.list
+
+				+list__item("Three Sliders for $10!", "", "Mon", "16")(style="background-image: url(img/image.jpg)")
+
+				+list__item("2 for 1 steak", "with drink purchase", "Tue", "21")(style="background-image: url(img/image.jpg)")
+
+				+list__item("happy hour $5 drinks", "from 5 – 7pm", "Mon, Tue, Wed, Thu, Fri", "42")(style="background-image: url(img/image.jpg)")
+
+				+list__item("$5 tequila shots!", "", "Mon", "16")(style="background-image: url(img/image.jpg)")
+
+	include inc/_modal-upgrade.jade
+
+
+
+
+
+
+
+
+
+
+
+
+
+

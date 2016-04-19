@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="12px" viewBox="0 0 10 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" fill="#777777">
+            <path d="M0,4.99703014 C0,4.4463856 0.455664396,4 0.995397568,4 L9.00460243,4 C9.55434533,4 10,4.45303631 10,4.99703014 L10,11.0029699 C10,11.5536144 9.5443356,12 9.00460243,12 L0.995397568,12 C0.445654671,12 0,11.5469637 0,11.0029699 L0,4.99703014 Z M5,10 C6.1045695,10 7,9.1045695 7,8 C7,6.8954305 6.1045695,6 5,6 C3.8954305,6 3,6.8954305 3,8 C3,9.1045695 3.8954305,10 5,10 Z" id="Combined-Shape"></path>
+            <path d="M3,4.99833453 L7,4.99833453 L7,3.00166547 C7,1.89311416 6.10637965,1 5,1 C3.89758804,1 3,1.89738974 3,3.00166547 L3,4.99833453 Z M5,0 C6.65685425,0 8,1.33902013 8,3.00166547 L8,4.99833453 L2,4.99833453 L2,3.00166547 C2,1.34389141 3.34651712,0 5,0 Z" id="Rectangle-2"></path>
+        </g>
+    </g>
+</svg>

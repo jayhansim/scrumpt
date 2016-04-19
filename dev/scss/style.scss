@@ -1,0 +1,221 @@
+@import "bourbon";
+@import "_inc/_var";
+@import "_inc/_variables"; // Bootstrap
+@import "_inc/_mixins"; // Bootstrap
+
+@import "_inc/_normalize";
+@import "_inc/_ff";
+@import "_inc/_global";
+
+@import "_inc/_header";
+@import "_inc/_toolbar";
+@import "_inc/_grid";
+@import "_inc/_newlisting";
+
+@import "_inc/_modals"; // Bootstrap
+@import "_inc/_component-animations";
+@import "_inc/_modals-custom";
+
+@import "_inc/helper";
+
+
+
+
+.iphone-container {
+	width: 375px;
+	height: 667px;
+	margin: 20px auto;
+	background: #212121;
+	box-shadow: 0 2px 20px rgba(0,0,0,.5);
+	font-family: $font;
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+}
+
+//------------------------
+//	STATUS
+//------------------------
+.iphone-container .status {
+	height: 20px;
+	font-family: $font-system;
+	font-size: 12px;
+	line-height: 20px;
+	@include display(flex);
+
+	> * {
+		padding: 0 7px;
+	}
+
+	&__left, &__right {
+		width:35%
+	}
+
+	&__right {
+		text-align: right;
+	}
+
+	&__time {
+		text-align: center;
+		@include flex-grow(1);
+		font-weight: 700;
+	}
+}
+
+
+//------------------------
+//	NAVIGATION
+//------------------------
+.iphone-container .navigation {
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+
+	&__title {
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+}
+
+
+//------------------------
+//	CONTENT
+//------------------------
+
+.iphone-container {
+	.main {
+		padding: 14px;
+		@include calc(height, '100% - 120px');
+	}
+
+	.deal {
+		@include calc(height, '100% - 8px');
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		text-align: center;
+		@include display(flex);
+		@include align-items(flex-end);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(#000, .5);
+		}
+	}
+
+	.deal__info, .deal__title {
+		position: relative;
+		z-index: 2;
+	}
+
+	.deal__title {
+		font-family: $font-tt;
+		font-size: 50px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+		width: 100%;
+
+		span {
+			display: block;
+			font-size: 25px;
+		}
+	}
+
+	.deal__info {
+		@include flex-grow(1);
+		padding: 14px;
+	}
+
+	.deal__name {
+		font-size: 18px;
+	}
+
+	.deal__location {
+		display: inline-block;
+	}
+
+	.deal__extra {
+		padding-left: 0;
+		padding-top: 14px;
+		list-style: none;
+
+		li {
+			display: inline-block;
+			padding: 0 14px;
+		}
+
+		[class*="icon"] {
+			width: 26px;
+			height: 26px;
+			display: inline-block;
+			background-repeat: no-repeat;
+			background-position: center;
+			vertical-align: -7px;
+			margin-right: 7px;
+		}
+	}
+
+	.icon__distance {
+		background: url(../img/Map_Pin@2x.png);
+		background-size: 20px 24px;
+	}
+
+	.icon__likes {
+		background: url(../img/Heart@2x.png);
+		background-size: 25px 22px;
+	}
+
+
+	[class*="deal-below"] {
+		margin: 0 9px;
+		height: 4px;
+		background: rgba(lighten(#666, 3), .2);
+		position: relative;
+	}
+
+	.deal-below {
+		z-index: 1;
+	}
+
+	.deal-below--2 {
+		height: 8px;
+		margin: 0 18px;
+		margin-top: -4px;
+	}
+}
+
+
+//------------------------
+//	TAB BAR
+//------------------------
+
+.iphone-container {
+	.tabbar {
+		height: 56px;
+		border-top: 1px solid #3d3d3d;
+		@include display(flex);
+		text-align: center;
+
+		> * {
+			height: 100%;
+			line-height: 56px;
+		}
+
+		&__search {
+			@include flex-grow(1);
+			border: 1px solid #3d3d3d;
+			border-width: 0 1px;
+		}
+
+		&__dislike, &__like {
+			width: 40.5%;
+		}
+	}
+}
