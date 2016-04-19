@@ -1,8 +1,10 @@
 //- Toolbar
 .toolbar
-	a.search(href="#")
-	.sort Sort by
-		select.sort__select
-			option(value="recent") Recent
-			option(value="popular") Popular
+	if empty
+	else
+		a.search(href="#")
+		.sort Sort by
+			select.sort__select
+				option(value="recent") Recent
+				option(value="popular") Popular
 	a.add-listing(href="#")

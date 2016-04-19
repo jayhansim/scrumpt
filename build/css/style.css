@@ -358,13 +358,73 @@ strong, b {
   .list__item {
     padding: 0 15px;
     width: 33.33%;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    position: relative; }
   @media (max-width: 991px) {
     .list__item {
       width: 50%; } }
   @media (max-width: 767px) {
     .list__item {
       width: 100%; } }
+
+/* empty state */
+.list--empty {
+  background: url(../img/listing-empty-bg.png) no-repeat center;
+  background-size: 100% auto;
+  text-align: center;
+  height: 300px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  align-content: center;
+  -ms-flex-line-pack: center;
+  position: relative; }
+  .list--empty::after {
+    position: absolute;
+    content: '';
+    bottom: -70px;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background: url(../img/listing-empty-shadow.png) center no-repeat;
+    background-size: auto 100%; }
+    @media (max-width: 767px) {
+      .list--empty::after {
+        background-size: 100% auto; } }
+  .list--empty > * {
+    width: 100%; }
+  @media (min-width: 768px) {
+    .list--empty {
+      height: 70vh;
+      min-height: 500px; }
+      .list--empty h1 {
+        font-size: 46px;
+        font-size: 4.6rem; } }
+  @media (min-width: 992px) {
+    .list--empty {
+      background-size: auto 100%; } }
 
 .deal {
   padding-top: 150%;
@@ -376,12 +436,14 @@ strong, b {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
   .deal::before {
     content: '';
-    background-color: rgba(24, 24, 24, 0.7);
+    background-color: rgba(24, 24, 24, 0.5);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; }
+  .deal--expired {
+    opacity: 0.5; }
 
 .deal__title {
   font-family: "tt_masters_demo_blackregular", "HelveticaNeue-Bold", sans-serif;
@@ -421,6 +483,12 @@ strong, b {
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0); }
+  .deal--expired:hover .deal__info {
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    -o-transform: translateY(50px);
+    transform: translateY(50px); }
 
 .deal__info__day {
   display: -webkit-box;
@@ -499,6 +567,23 @@ strong, b {
   margin-right: 7px;
   background: url(../img/Heart@2x.png) no-repeat center;
   background-size: 25px 22px; }
+
+.expired {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  right: 15px;
+  background-color: #3cc3c3;
+  text-transform: uppercase;
+  padding: 15px 5px;
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  font-family: "latosemibold", sans-serif; }
+  .expired:hover {
+    text-decoration: none;
+    background-color: #36b0b0; }
 
 .new {
   background-color: #edeeea;

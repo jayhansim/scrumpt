@@ -1,0 +1,36 @@
+extends inc/_layout.jade
+
+block title
+	title Listing
+
+block content
+	include inc/_header.jade
+
+	main.main--empty(role="main")
+		.container
+
+			- var empty = true
+
+			include inc/_toolbar.jade
+
+			.list--empty
+				h1 No saved specials
+				h2
+					a(href="#") Add your first
+
+
+	include inc/_modal-upgrade.jade
+
+
+
+
+
+
+
+
+
+
+
+
+
+

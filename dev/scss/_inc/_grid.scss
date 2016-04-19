@@ -25,6 +25,8 @@
 		padding: 0 15px;
 		width: 33.33%;
 		margin-bottom: 30px;
+		position: relative;
+
 	}
 
 	@media (max-width: $screen-sm-max) {
@@ -39,6 +41,54 @@
 		}
 	}
 }
+
+
+
+/* empty state */
+.list--empty {
+	background: url(../img/listing-empty-bg.png) no-repeat center;
+	background-size: 100% auto;
+	text-align: center;
+	height: 300px;
+	@include display(flex);
+	@include flex-wrap(wrap);
+	@include align-items(center);
+	@include align-content(center);
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: '';
+		bottom: -70px;
+		left: 0;
+		height: 40px;
+		width: 100%;
+		background: url(../img/listing-empty-shadow.png) center no-repeat;
+		background-size: auto 100%;
+
+		@media (max-width: $screen-xs-max) {
+			background-size: 100% auto;
+		}
+	}
+
+	> * {
+		width: 100%;
+	}
+
+	@media (min-width: $screen-sm){
+		height: 70vh;
+		min-height: 500px;
+
+		h1 {
+			@include font-size(4.6);
+		}
+	}
+
+	@media (min-width: $screen-md) {
+		background-size: auto 100%;
+	}
+}
+
 
 
 
@@ -58,12 +108,16 @@
 
 	&::before {
 		content:'';
-		background-color: rgba(#181818,.7);
+		background-color: rgba(#181818,.5);
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
+	}
+
+	&--expired {
+		opacity: .5
 	}
 }
 
@@ -97,6 +151,9 @@
 
 	.deal:hover & {
 		@include transform(translateY(0));
+	}
+	.deal--expired:hover & {
+		@include transform(translateY(50px));
 	}
 }
 
@@ -152,4 +209,24 @@
 	margin-right: 7px;
 	background: url(../img/Heart@2x.png) no-repeat center;
 	background-size: 25px 22px;
+}
+
+.expired {
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 15px;
+	right: 15px;
+	background-color: $color-teal;
+	text-transform: uppercase;
+	padding: 15px 5px;
+	color: #fff;
+	text-align: center;
+	z-index: 2;
+	font-family: $font-semibold;
+
+	&:hover {
+		text-decoration: none;
+		background-color: darken($color-teal,5);
+	}
 }

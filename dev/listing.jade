@@ -19,7 +19,10 @@ block content
 
 				+list__item("happy hour $5 drinks", "from 5 – 7pm", "Mon, Tue, Wed, Thu, Fri", "42")(style="background-image: url(img/image.jpg)")
 
-				+list__item("$5 tequila shots!", "", "Mon", "16")(style="background-image: url(img/image.jpg)")
+				- var expired = true
+
+				+list__item("$5 tequila shots!", "", "Mon", "16")(style="background-image: url(img/image.jpg)", class="deal--expired")
+
 
 	include inc/_modal-upgrade.jade
 
