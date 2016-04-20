@@ -58,11 +58,30 @@ block content
 							.upload-image
 								button.btn.btn--grey(type="button") Upload Image
 						.form-group.form-group--submit
+							//- for update/edit, remove the disabled attribute
 							button.btn(type="submit", disabled="disabled") Create Tile!
 
 				.new__preview
+
+					mixin list__item__new(title, titleDesc, location, city, distance, likesNum)
+						li.list__item.list__item--new
+							.deal&attributes(attributes)
+								h2.deal__title= title
+									span= titleDesc
+								.deal__info
+									.deal__info__location
+										.location= location
+											i= city
+									ul.deal__info__more
+										li
+											i.icon__distance
+											= distance
+										li
+											i.icon__likes
+											= likesNum
+
 					ul
-						+list__item("Three Sliders for $10!", "", "Mon", "16")(style="background-image: url(img/image.jpg)")
+						+list__item__new("$5 drinks happy hour", "5 - 7pm weekdays", "The Morrison Hotel", "Sydney", "50m", "16")(style="background-image: url(img/image.jpg)")
 
 
 

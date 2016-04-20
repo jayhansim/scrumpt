@@ -123,7 +123,7 @@
 
 .deal__title {
 	font-family: $font-tt;
-	font-size: 50px;
+	@include font-size(5);
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -137,7 +137,15 @@
 
 	span {
 		display: block;
-		font-size: 25px;
+		@include font-size(2.5);
+	}
+
+	@media (max-width: $screen-xs-max) {
+		@include font-size(3.6);
+
+		span {
+			@include font-size(2.1);
+		}
 	}
 }
 
@@ -201,15 +209,27 @@
 	}
 }
 
-.icon__likes {
+.icon__likes, .icon__distance {
 	width: 26px;
 	height: 26px;
 	display: inline-block;
 	vertical-align: -7px;
 	margin-right: 7px;
+}
+
+.icon__likes {
 	background: url(../img/Heart@2x.png) no-repeat center;
 	background-size: 25px 22px;
 }
+
+.icon__distance {
+	background: url(../img/Map_Pin@2x.png) no-repeat center;
+	background-size: 20px 24px;
+}
+
+
+
+/* Inactive Deals */
 
 .inactive {
 	opacity: 1;
@@ -228,5 +248,33 @@
 	&:hover {
 		text-decoration: none;
 		background-color: darken($color-teal,5);
+	}
+}
+
+
+
+/* Add New Deals */
+
+.list__item--new {
+	.deal__info {
+		@include transform(translateY(0));
+		background: none;
+		text-align: center;
+		bottom: 30px;
+
+		&__location {
+			i {
+				margin-left: 3px;
+			}
+		}
+
+		&__more {
+			margin-top: 5px;
+
+			li {
+				display: inline-block;
+				margin: 0 10px;
+			}
+		}
 	}
 }

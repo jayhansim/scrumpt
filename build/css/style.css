@@ -252,7 +252,7 @@ strong, b {
       .nav li:not(:first-child) {
         margin: 0 2px; }
     .nav a {
-      padding: 0 5px 10px; }
+      padding: 0 2px 10px; }
       .nav a.current {
         border-top: none;
         border-bottom: 2px solid #3cc3c3; } }
@@ -448,6 +448,7 @@ strong, b {
 .deal__title {
   font-family: "tt_masters_demo_blackregular", "HelveticaNeue-Bold", sans-serif;
   font-size: 50px;
+  font-size: 5rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -462,7 +463,15 @@ strong, b {
   line-height: 1.2; }
   .deal__title span {
     display: block;
-    font-size: 25px; }
+    font-size: 25px;
+    font-size: 2.5rem; }
+  @media (max-width: 767px) {
+    .deal__title {
+      font-size: 36px;
+      font-size: 3.6rem; }
+      .deal__title span {
+        font-size: 21px;
+        font-size: 2.1rem; } }
 
 .deal__info {
   position: absolute;
@@ -559,15 +568,22 @@ strong, b {
   .deal__info__edit .delete {
     color: #fe5669; }
 
-.icon__likes {
+.icon__likes, .icon__distance {
   width: 26px;
   height: 26px;
   display: inline-block;
   vertical-align: -7px;
-  margin-right: 7px;
+  margin-right: 7px; }
+
+.icon__likes {
   background: url(../img/Heart@2x.png) no-repeat center;
   background-size: 25px 22px; }
 
+.icon__distance {
+  background: url(../img/Map_Pin@2x.png) no-repeat center;
+  background-size: 20px 24px; }
+
+/* Inactive Deals */
 .inactive {
   opacity: 1;
   position: absolute;
@@ -584,6 +600,24 @@ strong, b {
   .inactive:hover {
     text-decoration: none;
     background-color: #36b0b0; }
+
+/* Add New Deals */
+.list__item--new .deal__info {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  background: none;
+  text-align: center;
+  bottom: 30px; }
+  .list__item--new .deal__info__location i {
+    margin-left: 3px; }
+  .list__item--new .deal__info__more {
+    margin-top: 5px; }
+    .list__item--new .deal__info__more li {
+      display: inline-block;
+      margin: 0 10px; }
 
 .new {
   background-color: #edeeea;
@@ -784,6 +818,28 @@ select.form-control {
   list-style: none;
   padding-left: 0;
   margin: 0; }
+
+.account {
+  margin: 40px auto 0;
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  max-width: 480px;
+  overflow: hidden; }
+  .account li {
+    float: left;
+    width: 33.33%; }
+  .account a {
+    display: block;
+    padding: 10px;
+    color: #4d4d4f; }
+    .account a:hover {
+      color: #3cc3c3;
+      text-decoration: none; }
+  .account .current {
+    background-color: #f2f3f0;
+    font-family: "latosemibold", sans-serif;
+    color: #3cc3c3; }
 
 .modal-open {
   overflow: hidden; }
