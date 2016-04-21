@@ -2,14 +2,43 @@ extends inc/_layout.jade
 
 block title
 	title Listing
+	style
+		| body {background-color: #f2f3f0}
 
 block content
 	include inc/_header.jade
 
-	main.main--empty(role="main")
-		.container
+	main.main--manage(role="main")
 
-			include inc/_account-tab.jade
+		include inc/_account-tab.jade
+
+		.manage
+			.container
+
+				form.form.form--manage(id="form-account")
+
+					.form-group
+						label.control-label(for="venue") Venue Name
+						input.form-control(id="venue", type="text", placeholder="Venue Name")
+
+					.form-group
+						label.control-label(for="contact-name") Contact Name
+						input.form-control(id="contact-name", type="text", placeholder="Full Name")
+
+					.form-group
+						label.control-label(for="email") Email
+						input.form-control(id="email", type="email", placeholder="Email")
+
+					.form-group
+						label.control-label(for="address") Address <i>From Google</i>
+						input.form-control(id="address", type="text", placeholder="Address")
+
+					.form-group
+						label.control-label(for="phone") Phone number
+						input.form-control(id="phone", type="number", placeholder="10 digits")
+
+					.form-group.form-group--btn
+						button.btn(type="submit") Save Changes
 
 
 

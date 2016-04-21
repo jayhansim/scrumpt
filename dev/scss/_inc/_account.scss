@@ -2,10 +2,15 @@
 //	ACCOUNT
 //------------------------
 
+/* account */
+.main--manage {
+	background-color: #fff;
+}
+
 .account {
-	margin: 40px auto 0;
+	margin: 0 auto ;
 	list-style: none;
-	padding-left: 0;
+	padding: 40px 0 0;
 	text-align: center;
 	max-width: 480px;
 	overflow: hidden;
@@ -30,5 +35,84 @@
 		background-color: $color-lightgrey;
 		font-family: $font-semibold;
 		color: $color-teal;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		width: 375px - 30px;
+	}
+}
+
+.manage {
+	background-color: $color-lightgrey;
+}
+
+.form--manage, .billing {
+	padding: 40px 0;
+	max-width: 480px;
+	margin: 0 auto;
+}
+
+
+/* billing */
+.billing {
+	position: relative;
+
+ 	&:not(:last-child) {
+		border-bottom: 3px solid #fff;
+	}
+
+	.btn {
+		@media (min-width: $screen-sm) {
+			width: 50%;
+		}
+	}
+
+	.btn--cancel {
+		display: block;
+		margin-top: 20px;
+		@media (min-width: $screen-sm) {
+			position: absolute;
+			right: 0;
+			bottom: 40px + 10px;
+		}
+	}
+}
+
+.billing__title {
+	@include font-size(1.2);
+	text-transform: uppercase;
+}
+
+.btn--cancel {
+	text-transform: uppercase;
+}
+
+.billing-invoices {
+	ul {
+		padding-left: 0;
+		list-style: none;
+	}
+
+	li {
+		display: table;
+		width: 100%;
+		padding: 5px 0;
+
+		> * {
+			display: table-cell;
+		}
+	}
+
+	.date {
+		width: 50%
+	}
+
+	.price, .pdf {
+		width: 25%;
+		text-align: right;
+	}
+
+	.price {
+		color: #939393;
 	}
 }

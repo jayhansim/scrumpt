@@ -1,152 +1,154 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1,width=device-width">
-  <title>Listing</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="scripts/scripts.min.js"></script>
-  <body></body>
-  <header role="banner" class="header">
-    <div class="container">
-      <div class="logo"></div>
-      <nav role="navigation" class="nav">
-        <ul>
-          <li><a href="#" class="current">Deals</a></li>
-          <li><a href="#" id="upgrade">Upgrade</a></li>
-          <li><a href="#">Analytics</a></li>
-          <li><a href="#">Norfolk</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main role="main" class="main--empty">
-    <div class="container">
-      <div class="toolbar"><a href="#" class="add-listing"></a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,width=device-width">
+    <title>Listing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="scripts/scripts.min.js"></script>
+  </head>
+  <body>
+    <header role="banner" class="header">
+      <div class="container">
+        <div class="logo"></div>
+        <nav role="navigation" class="nav">
+          <ul>
+            <li><a href="#" class="current">Deals</a></li>
+            <li><a href="#" id="upgrade">Upgrade</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Norfolk</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="list--empty">
-        <h1>No saved specials</h1>
-        <h2><a href="#">Add your first</a></h2>
-      </div>
-    </div>
-  </main>
-  <div tabindex="-1" role="dialog" id="modal-pricing" class="modal fade">
-    <div class="modal-dialog">
-      <div id="pricing-table" class="modal-content modal-pricing">
-        <div class="modal-header">
-          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-          <h2 class="modal-title">Woo! You are ready for an upgrade!</h2>
+    </header>
+    <main role="main" class="main--empty">
+      <div class="container">
+        <div class="toolbar"><a href="#" class="add-listing"></a>
         </div>
-        <div class="modal-body">
-          <div class="pricing">
-            <div class="pricing__duration"><a href="#monthly" class="selected">Monthly</a><a href="#annually" class="annual">Annually (-10%!)</a></div>
-            <div class="pricing__table">
-              <ul data-duration="monthly">
-                <li class="package">
-                  <div class="package__title">Free</div>
-                  <div class="package__price">Free!</div>
-                  <ul class="package__features">
-                    <li>Venue listing</li>
-                    <li>5 Tiles</li>
-                    <li>Base Priority</li>
-                    <li>Email support</li>
-                  </ul>
-                  <div class="package__buy">
-                    <button type="button" disabled="disabled" class="btn">Current</button>
+        <div class="list--empty">
+          <h1>No saved specials</h1>
+          <h2><a href="#">Add your first</a></h2>
+        </div>
+      </div>
+    </main>
+    <div tabindex="-1" role="dialog" id="modal-pricing" class="modal fade">
+      <div class="modal-dialog">
+        <div id="pricing-table" class="modal-content modal-pricing">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+            <h2 class="modal-title">Woo! You are ready for an upgrade!</h2>
+          </div>
+          <div class="modal-body">
+            <div class="pricing">
+              <div class="pricing__duration"><a href="#monthly" class="selected">Monthly</a><a href="#annually" class="annual">Annually (-10%!)</a></div>
+              <div class="pricing__table">
+                <ul data-duration="monthly">
+                  <li class="package">
+                    <div class="package__title">Free</div>
+                    <div class="package__price">Free!</div>
+                    <ul class="package__features">
+                      <li>Venue listing</li>
+                      <li>5 Tiles</li>
+                      <li>Base Priority</li>
+                      <li>Email support</li>
+                    </ul>
+                    <div class="package__buy">
+                      <button type="button" disabled="disabled" class="btn">Current</button>
+                    </div>
+                  </li>
+                  <li class="package">
+                    <div class="package__title">Light</div>
+                    <div class="package__price">$30/mth</div>
+                    <ul class="package__features">
+                      <li>Venue listing</li>
+                      <li>8 Tiles</li>
+                      <li>Priority above Free</li>
+                      <li>Email support</li>
+                      <li>Basic reporting</li>
+                    </ul>
+                    <div class="package__buy">
+                      <button type="button" class="btn">Upgrade!</button>
+                    </div>
+                  </li>
+                  <li class="package">
+                    <div class="package__title">Mid</div>
+                    <div class="package__price">$69/mth</div>
+                    <ul class="package__features">
+                      <li>Venue listing</li>
+                      <li>11 Tiles</li>
+                      <li>Priority above Light</li>
+                      <li>Email &amp; phone support</li>
+                      <li>Advanced reporting</li>
+                    </ul>
+                    <div class="package__buy">
+                      <button type="button" class="btn">Upgrade!</button>
+                    </div>
+                  </li>
+                  <li class="package">
+                    <div class="package__title">Full</div>
+                    <div class="package__price">$175/mth <em>(3mth min)</em></div>
+                    <ul class="package__features">
+                      <li>Venue listing</li>
+                      <li>15 Tiles</li>
+                      <li>Top Priority</li>
+                      <li>Account Manager</li>
+                      <li>Premium reporting</li>
+                    </ul>
+                    <div class="package__buy">
+                      <button type="button" class="btn">Upgrade!</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="payment" class="modal-content modal-payment">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+            <h2 class="modal-title">Upgrade to the <span id="selected-package">Full</span> Plan</h2>
+            <h3 class="package__description">Maximum tile and all of our Premium features</h3>
+          </div>
+          <div class="modal-body align-center">
+            <form id="form-payment">
+              <div class="payment">
+                <div class="payment__row">
+                  <div class="form-group">
+                    <input type="number" placeholder="Card number" required class="form-control">
+                    <ul class="cc">
+                      <li class="cc__visa"></li>
+                      <li class="cc__mastercard"></li>
+                      <li class="cc__amex"></li>
+                    </ul>
                   </div>
-                </li>
-                <li class="package">
-                  <div class="package__title">Light</div>
-                  <div class="package__price">$30/mth</div>
-                  <ul class="package__features">
-                    <li>Venue listing</li>
-                    <li>8 Tiles</li>
-                    <li>Priority above Free</li>
-                    <li>Email support</li>
-                    <li>Basic reporting</li>
-                  </ul>
-                  <div class="package__buy">
-                    <button type="button" class="btn">Upgrade!</button>
+                  <div class="form-group">
+                    <input type="number" placeholder="Expiry" required class="form-control">
                   </div>
-                </li>
-                <li class="package">
-                  <div class="package__title">Mid</div>
-                  <div class="package__price">$69/mth</div>
-                  <ul class="package__features">
-                    <li>Venue listing</li>
-                    <li>11 Tiles</li>
-                    <li>Priority above Light</li>
-                    <li>Email &amp; phone support</li>
-                    <li>Advanced reporting</li>
-                  </ul>
-                  <div class="package__buy">
-                    <button type="button" class="btn">Upgrade!</button>
+                </div>
+                <div class="payment__row">
+                  <div class="form-group">
+                    <input type="text" placeholder="Name on card" required class="form-control">
                   </div>
-                </li>
-                <li class="package">
-                  <div class="package__title">Full</div>
-                  <div class="package__price">$175/mth <em>(3mth min)</em></div>
-                  <ul class="package__features">
-                    <li>Venue listing</li>
-                    <li>15 Tiles</li>
-                    <li>Top Priority</li>
-                    <li>Account Manager</li>
-                    <li>Premium reporting</li>
-                  </ul>
-                  <div class="package__buy">
-                    <button type="button" class="btn">Upgrade!</button>
+                  <div class="form-group">
+                    <input type="password" placeholder="Security code" required class="form-control">
                   </div>
-                </li>
-              </ul>
+                </div>
+              </div>
+              <div class="payment__charge">
+                <h3>You will be charged <strong><sup>$</sup>1,785/year</strong></h3>
+                <h4>You save $315 <span>or <a href="#">pay monthly</a></span></h4>
+              </div>
+              <div class="payment__submit">
+                <button type="submit" class="btn">Upgrade Your Plan!</button>
+              </div>
+            </form>
+            <div class="payment__footnote">
+              <p><i class="icon__lock"></i>Secure credit card payment<span>This is a secure 128-bit SSL encrypted payment</span></p>
             </div>
           </div>
         </div>
       </div>
-      <div id="payment" class="modal-content modal-payment">
-        <div class="modal-header">
-          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-          <h2 class="modal-title">Upgrade to the <span id="selected-package">Full</span> Plan</h2>
-          <h3 class="package__description">Maximum tile and all of our Premium features</h3>
-        </div>
-        <div class="modal-body align-center">
-          <form id="form-payment">
-            <div class="payment">
-              <div class="payment__row">
-                <div class="form-group">
-                  <input type="number" placeholder="Card number" required class="form-control">
-                  <ul class="cc">
-                    <li class="cc__visa"></li>
-                    <li class="cc__mastercard"></li>
-                    <li class="cc__amex"></li>
-                  </ul>
-                </div>
-                <div class="form-group">
-                  <input type="number" placeholder="Expiry" required class="form-control">
-                </div>
-              </div>
-              <div class="payment__row">
-                <div class="form-group">
-                  <input type="text" placeholder="Name on card" required class="form-control">
-                </div>
-                <div class="form-group">
-                  <input type="password" placeholder="Security code" required class="form-control">
-                </div>
-              </div>
-            </div>
-            <div class="payment__charge">
-              <h3>You will be charged <strong><sup>$</sup>1,785/year</strong></h3>
-              <h4>You save $315 <span>or <a href="#">pay monthly</a></span></h4>
-            </div>
-            <div class="payment__submit">
-              <button type="submit" class="btn">Upgrade Your Plan!</button>
-            </div>
-          </form>
-          <div class="payment__footnote">
-            <p><i class="icon__lock"></i>Secure credit card payment<span>This is a secure 128-bit SSL encrypted payment</span></p>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</head>
+  </body>
+</html>

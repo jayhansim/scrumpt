@@ -1,0 +1,72 @@
+extends inc/_layout.jade
+
+block title
+	title Listing
+	style
+		| body {background-color: #f2f3f0}
+
+block content
+	include inc/_header.jade
+
+	main.main--manage(role="main")
+
+		include inc/_account-tab.jade
+
+		.manage
+			.container
+
+				//- Current Plan
+				.billing.billing-plan
+					.billing__title Active
+					h1 Light Plan <span id="duration">(annual)</span>
+					a.btn(href="#") Upgrade Plan
+					a.color-red.btn--cancel(href="") Cancel Plan
+
+
+				//- Card Info
+				.billing.billing-cardinfo
+					.billing__title Card Info
+					h2 &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 9335
+
+					a.btn(href="#") Change Card
+
+				//- History
+				.billing.billing-invoices
+					.billing__title Invoices
+					ul
+						li
+							.date Apr 28, 2016
+							.price $30.00
+							.pdf
+								a(href="#") PDF
+						li
+							.date Mar 28, 2016
+							.price $30.00
+							.pdf
+								a(href="#") PDF
+						li
+							.date Feb 28, 2016
+							.price $30.00
+							.pdf
+								a(href="#") PDF
+						li
+							.date Jan 28, 2016
+							.price $30.00
+							.pdf
+								a(href="#") PDF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,40 +1,40 @@
 doctype html
 html(lang="en")
-head
-	meta(charset="UTF-8")
-	meta(name="viewport", content="initial-scale=1,width=device-width")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="initial-scale=1,width=device-width")
 
-	block title
-		title Scrump
+		block title
+			title Scrump
 
-	block css
-		link(rel="stylesheet", href="css/style.css")
+		block css
+			link(rel="stylesheet", href="css/style.css")
 
-	block js
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
-		script(src="scripts/scripts.min.js")
+		block js
+			script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+			script(src="scripts/scripts.min.js")
 
 	body
 
-	mixin list__item(title, titleDesc, day, likesNum)
-					li.list__item
-						if inactive
-							a.inactive(href="#") Upgrade to reactivate
-						.deal&attributes(attributes)
-							h2.deal__title= title
-								span= titleDesc
-							.deal__info
-								.deal__info__day
-									.day= day
-									.likes
-										i.icon__likes
-										= likesNum
-								ul.deal__info__edit
-									li
-										a(href="#") Edit
-									li
-										a(href="#") Change Photo
-									li
-										a.delete(href="#") Delete
+		mixin list__item(title, titleDesc, day, likesNum)
+						li.list__item
+							if inactive
+								a.inactive(href="#") Upgrade to reactivate
+							.deal&attributes(attributes)
+								h2.deal__title= title
+									span= titleDesc
+								.deal__info
+									.deal__info__day
+										.day= day
+										.likes
+											i.icon__likes
+											= likesNum
+									ul.deal__info__edit
+										li
+											a(href="#") Edit
+										li
+											a(href="#") Change Photo
+										li
+											a.delete(href="#") Delete
 
 		block content

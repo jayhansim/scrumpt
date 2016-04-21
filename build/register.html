@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1,width=device-width">
-  <title>Scrump</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/login.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="scripts/scripts.min.js"></script>
-  <body></body>
-  <div class="container--login">
-    <header role="banner">
-      <div class="logo logo--login"></div>
-    </header>
-    <main role="main">
-      <div class="login">
-        <form class="form form-login">
-          <div class="form-group">
-            <input type="email" placeholder="Email Address" required class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="password" placeholder="Create Password" required class="form-control">
-          </div>
-          <div class="form-group">
-            <select required class="form-control">
-              <option value="" selected="selected" disabled="disabled">Select your venue</option>
-              <option value="Sydney">Sydney</option>
-              <option value="Melbourne">Melbourne</option>
-              <option value="Perth">Perth</option>
-            </select>
-          </div>
-          <div class="form-group form-group--btn">
-            <button type="submit" class="btn">Register</button>
-          </div>
-          <div class="form-group align-center">
-            <p>Already a member? <strong><a href="login.html">Login</a></strong></p>
-          </div>
-        </form>
-      </div>
-    </main>
-  </div>
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,width=device-width">
+    <title>Scrump</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="scripts/scripts.min.js"></script>
+  </head>
+  <body>
+    <div class="container--login">
+      <header role="banner">
+        <div class="logo logo--login"></div>
+      </header>
+      <main role="main">
+        <div class="login">
+          <form class="form form-login">
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Create Password" required class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Venue" required class="form-control">
+            </div>
+            <div class="form-group form-group--btn">
+              <button type="submit" class="btn">Register</button>
+            </div>
+            <div class="form-group align-center">
+              <p>Already a member? <strong><a href="login.html">Login</a></strong></p>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -192,7 +192,8 @@ img {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal;
-  font-family: "latolight", sans-serif; }
+  font-family: "latolight", sans-serif;
+  margin-bottom: 20px; }
 
 h1 {
   line-height: 1.1; }
@@ -633,8 +634,6 @@ strong, b {
   display: flex; }
   .new h1 {
     margin-bottom: 20px; }
-  .new .form-group {
-    margin-bottom: 20px; }
 
 .new__form {
   width: 65%;
@@ -679,9 +678,17 @@ strong, b {
 
   .new__preview {
     width: 100%; } }
+.form-group {
+  margin-bottom: 20px; }
+  .form-group--btn {
+    margin-top: 40px; }
+
 .control-label {
   display: block;
   margin-bottom: 5px; }
+  .control-label i {
+    font-style: italic;
+    color: #939393; }
 
 .form-control {
   width: 100%;
@@ -773,6 +780,7 @@ strong, b {
 
 .btn {
   display: block;
+  text-align: center;
   width: 100%;
   color: #fff;
   padding: 10px 20px;
@@ -784,7 +792,8 @@ strong, b {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear; }
   .btn:hover {
-    background-color: #36b0b0; }
+    background-color: #36b0b0;
+    text-decoration: none; }
   .btn--grey {
     background-color: #4d4d4f; }
     .btn--grey:hover {
@@ -819,10 +828,14 @@ select.form-control {
   padding-left: 0;
   margin: 0; }
 
+/* account */
+.main--manage {
+  background-color: #fff; }
+
 .account {
-  margin: 40px auto 0;
+  margin: 0 auto;
   list-style: none;
-  padding-left: 0;
+  padding: 40px 0 0;
   text-align: center;
   max-width: 480px;
   overflow: hidden; }
@@ -840,6 +853,59 @@ select.form-control {
     background-color: #f2f3f0;
     font-family: "latosemibold", sans-serif;
     color: #3cc3c3; }
+  @media (max-width: 767px) {
+    .account {
+      width: 345px; } }
+
+.manage {
+  background-color: #f2f3f0; }
+
+.form--manage, .billing {
+  padding: 40px 0;
+  max-width: 480px;
+  margin: 0 auto; }
+
+/* billing */
+.billing {
+  position: relative; }
+  .billing:not(:last-child) {
+    border-bottom: 3px solid #fff; }
+  @media (min-width: 768px) {
+    .billing .btn {
+      width: 50%; } }
+  .billing .btn--cancel {
+    display: block;
+    margin-top: 20px; }
+    @media (min-width: 768px) {
+      .billing .btn--cancel {
+        position: absolute;
+        right: 0;
+        bottom: 50px; } }
+
+.billing__title {
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-transform: uppercase; }
+
+.btn--cancel {
+  text-transform: uppercase; }
+
+.billing-invoices ul {
+  padding-left: 0;
+  list-style: none; }
+.billing-invoices li {
+  display: table;
+  width: 100%;
+  padding: 5px 0; }
+  .billing-invoices li > * {
+    display: table-cell; }
+.billing-invoices .date {
+  width: 50%; }
+.billing-invoices .price, .billing-invoices .pdf {
+  width: 25%;
+  text-align: right; }
+.billing-invoices .price {
+  color: #939393; }
 
 .modal-open {
   overflow: hidden; }
@@ -1278,6 +1344,9 @@ tbody.collapse.in {
 
 .align-center {
   text-align: center; }
+
+.color-red {
+  color: #fe5669; }
 
 .iphone-container {
   width: 375px;
