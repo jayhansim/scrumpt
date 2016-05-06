@@ -154,14 +154,17 @@
 	width: 100%;
 	bottom: 0;
 	background-color: rgba(#333, .8);
-	@include transform(translateY(50px));
-	@include transition(transform .3s ease-in-out);
 
-	.deal:hover & {
-		@include transform(translateY(0));
-	}
-	.deal--inactive:hover & {
+	@media (min-width: 1025px) {
 		@include transform(translateY(50px));
+		@include transition(transform .3s ease-in-out);
+
+		.deal:hover & {
+			@include transform(translateY(0));
+		}
+		.deal--inactive:hover & {
+			@include transform(translateY(50px));
+		}
 	}
 }
 
